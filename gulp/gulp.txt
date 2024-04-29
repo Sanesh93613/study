@@ -1,0 +1,28 @@
+звёздочки    https://www.atlassian.com/ru/git/tutorials/saving-changes/gitignore
+https://gulpjs.com/docs/en/getting-started/quick-start/    - сайт как установить gulp
+Проверить установлины ли эти штуки
+node --version
+npm --version
+npx --version
+
+установить gulp
+npm install --global gulp-cli
+установить gulp в проект
+npm init
+какой-то devDependencies
+npm install --save-dev gulp
+
+
+создать gulpfile.js
+
+function defaultTask(cb) {
+  // place code for your default task here
+  cb();
+}
+
+exports.default = defaultTask
+
+проверить работает ли галп в консоли написать "gulp"
+
+saas установка
+npm install sass gulp-sass --save-dev
