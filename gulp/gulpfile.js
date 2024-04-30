@@ -16,16 +16,16 @@ const browserSync = require('browser-sync').create();
 
 // перевод sass в css 
 gulp.task('styles', function() {
-  return gulp.src('glp/SASS/*.sass')
+  return gulp.src('./new_uber/SASS/*.sass')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('glp/css'));
+    .pipe(gulp.dest('./new_uber/css'));
 });
 
 gulp.task('browsersync',function () {
     // инициализация Browsersync
     browserSync.init({ 
       // указываем папку сервера
-      server: { baseDir: 'glp/' }, 
+      server: { baseDir: './new_uber/' }, 
       // отключаем уведомления
       notify: false, 
       // отвечает за режим работы: true (подключение к интернет) или false (без подключения интернет)
@@ -34,9 +34,9 @@ gulp.task('browsersync',function () {
   });
 
 gulp.task('watch', function() {
-    gulp.watch('glp/SASS/*.sass', gulp.series('styles'));
-    gulp.watch("glp/CSS/*.css").on('change', browserSync.reload);
-    gulp.watch("glp/*.html").on('change', browserSync.reload);
+    gulp.watch('./new_uber/SASS/*.sass', gulp.series('styles'));
+    gulp.watch("./new_uber/CSS/*.css").on('change', browserSync.reload);
+    gulp.watch("./new_uber/*.html").on('change', browserSync.reload);
 });  
 
 gulp.task('default', gulp.parallel('styles', 'watch', 'browsersync'));
