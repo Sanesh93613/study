@@ -20,10 +20,33 @@ header .menu {
   list-style-type: none;
 }
 header .menu .menu_link {
+  position: relative;
   font-size: 15px;
   text-decoration: none;
   font-weight: 300;
   color: #ffffff;
+}
+header .menu .menu_link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #1eacc7;
+  transition: width 0.5s;
+}
+header .menu .menu_link:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #4ce2ff;
+  transition: width 0.5s;
 }
 header .menu .menu_item {
   border-right: 2px dotted black;
@@ -255,7 +278,6 @@ header .subheader {
   width: 320px;
   height: 280px;
   margin-top: 19px;
-  background: url("../img/mobile/mobile_1.jpg") center center/cover no-repeat;
 }
 .mobile_card_text {
   text-align: center;
@@ -298,6 +320,9 @@ header .subheader {
 }
 .mobile_card_round:hover:before, .mobile_card_round:hover:after {
   background-color: #ff5656;
+}
+.mobile_card1 {
+  background: url("../img/mobile/mobile_1.jpg") center center/cover no-repeat;
 }
 .mobile_card2 {
   background: url("../img/mobile/mobile_2.jpg") center center/cover no-repeat;
@@ -509,16 +534,18 @@ footer {
   padding: 14px 0 31px 0;
   position: relative;
 }
+footer img {
+  width: 100%;
+}
 footer a {
   text-decoration: none;
   color: inherit;
 }
 footer .social {
   position: absolute;
-  left: 25px;
+  left: 10%;
   top: 50%;
   transform: translateY(-50%);
-  width: 300px;
   width: 156px;
   display: flex;
   justify-content: space-between;
@@ -526,8 +553,6 @@ footer .social {
 footer .social .rounds {
   width: 32px;
   height: 32px;
-  background-color: #070716;
-  border-radius: 100%;
 }
 footer .info {
   margin: 0 auto;
@@ -567,7 +592,7 @@ footer .info_lang {
 }
 footer .download {
   position: absolute;
-  right: 25px;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
@@ -577,7 +602,6 @@ footer .download {
 footer .download_item {
   width: 90px;
   height: 30px;
-  background-color: black;
 }
 
 .black {

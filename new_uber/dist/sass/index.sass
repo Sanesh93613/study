@@ -51,11 +51,33 @@ header
 		padding: 13px 50px 
 		list-style-type: none 
 		.menu_link 
+			position: relative
 			font-size: 15px 
 			text-decoration: none 
 			font-weight: 300 
-			color: #ffffff 
+			color: #ffffff
+			&:after 
+				content: ""
+				display: block
+				position: absolute
+				right: 0
+				bottom: -3px
+				width: 0
+				height: 2px /* Высота линии */
+				background-color: $blue_color /* Цвет подчеркивания при исчезании линии*/
+				transition: width 0.5s /* Время эффекта */ 
+			&:hover:after 
+				content: ""
+				width: 100%
+				display: block
+				position: absolute
+				left: 0
+				bottom: -3px
+				height: 2px /* Высота линии */
+				background-color: #4ce2ff /* Цвет подчеркивания при появлении линии*/
+				transition: width 0.5s  /* Время эффекта */
 		.menu_item 
+			
 			border-right: 2px dotted black 
 			padding-right: 28px 
 	.subheader 
@@ -228,6 +250,7 @@ header
 				display: block
 				width:14px
 				height: 2px
+				
 				background-color:$blue_color	
 				transition: 0.4s
 			&:after
@@ -243,7 +266,7 @@ header
 			&:hover
 				&:before, &:after
 					background-color: $red_color
-			&_card1
+	&_card1
 		background: url('../img/mobile/mobile_1.jpg') center center/cover no-repeat
 	&_card2
 		background: url('../img/mobile/mobile_2.jpg') center center/cover no-repeat
@@ -347,7 +370,7 @@ header
 	background: url('../img/world_bg.png') center center/cover no-repeat 
 	.bg_wrapper
 		min-height: 717px
-	.container
+	
 		
 	&_label
 		@include label
@@ -377,16 +400,17 @@ footer
 	min-height: 148px
 	padding: 14px 0 31px 0 
 	position: relative
-	
+	img
+		width: 100%
 	a
 		text-decoration: none
 		color: inherit
 	.social
 		position: absolute
-		left: 25px
+		left: 10%
 		top: 50%
 		transform: translateY(-50%)
-		width: 300px
+		// width: 300px
 		width: 156px
 
 		display: flex
@@ -395,8 +419,10 @@ footer
 		.rounds
 			width: 32px
 			height: 32px
-			background-color: #070716
-			border-radius: 100%
+			
+			
+			
+			
 	
 	.info
 		margin: 0 auto
@@ -434,7 +460,7 @@ footer
 			color: $blue_color
 	.download
 		position: absolute
-		right: 25px
+		right: 10%
 		top: 50%
 		transform: translateY(-50%)
 		width: 300px
@@ -444,7 +470,7 @@ footer
 		&_item	
 			width: 90px	
 			height: 30px
-			background-color: black
+			
 	
 .black
 	height: 8px
