@@ -1,0 +1,35 @@
+
+@mixin bg_color
+	background-color: #1eacc7 	
+@mixin label 
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0 auto 
+	width: 119px 
+	height: 29px 
+	background-color: #000000 
+	font-size: 11px 
+	font-weight: 100 
+	text-transform: uppercase 
+	color: #ffffff 
+	text-align: center
+@mixin black_title
+	text-align: center 
+	margin-bottom: 5px 
+	font-size: 38px 
+	font-weight: 700 
+	text-transform: uppercase 
+	color: #222222 
+@mixin black_subtitle
+	text-align: center
+	font-family: Roboto
+	font-size: 17px
+	line-height: 21px
+	font-weight: 400
+	color: #222222
+@mixin btn_hover
+	&:hover
+		background-image: none
+		background-color: $blue_color 
+	

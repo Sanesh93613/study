@@ -52,6 +52,9 @@ header .menu .menu_item {
   border-right: 2px dotted black;
   padding-right: 28px;
 }
+header .menu .menu_item:last-child {
+  border-right: none;
+}
 header .subheader {
   position: absolute;
   width: 100%;
@@ -282,6 +285,7 @@ header .subheader {
 .mobile_card_text {
   text-align: center;
   font-size: 24px;
+  line-height: 40px;
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
@@ -480,9 +484,6 @@ header .subheader {
   padding: 49px 0;
   background: url("../img/world_bg.png") center center/cover no-repeat;
 }
-.cities .bg_wrapper {
-  min-height: 717px;
-}
 .cities_label {
   display: flex;
   align-items: center;
@@ -607,4 +608,96 @@ footer .download_item {
 .black {
   height: 8px;
   background-color: #070716;
+}
+
+@media (max-width: 1200px) {
+  header .menu .menu_item {
+    padding-right: 12px;
+  }
+  .subheader_tell {
+    font-size: 18px;
+  }
+  .eight_text {
+    width: 286px;
+  }
+  .mobile_card {
+    width: 300px;
+  }
+  .mobile_card_text {
+    line-height: 34px;
+  }
+  footer .download {
+    flex-direction: column;
+    right: 0%;
+    width: 177px;
+    height: 127px;
+  }
+  footer .social {
+    left: 6%;
+  }
+}
+@media (max-width: 991px) {
+  header .menu .menu_link {
+    font-size: 11px;
+  }
+  .subheader_logo_text {
+    font-size: 12px;
+  }
+  .subheader_call {
+    margin-top: 18px;
+  }
+  .subheader_btn {
+    margin-left: 22px;
+  }
+  .promo {
+    padding: 183px 0 80px 0;
+  }
+  .promo_title {
+    font-size: 53px;
+  }
+  .promo_subtitle {
+    line-height: 37px;
+    font-size: 32px;
+  }
+  .eight_round {
+    width: 114px;
+    height: 92px;
+  }
+  .eight_round img {
+    width: 70%;
+  }
+  .mobile_card {
+    padding: 84px 10px 35px 10px;
+    height: 255px;
+    width: 205px;
+  }
+  .mobile_card_text {
+    line-height: 31px;
+    font-size: 19px;
+  }
+  .mobile_card_round {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cities {
+    height: 600px;
+  }
+  .cities a {
+    margin-top: 300px;
+  }
+  footer .social {
+    transform: none;
+    position: static;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  footer .download {
+    transform: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: row;
+    position: static;
+    width: 288px;
+    height: 30px;
+  }
 }
