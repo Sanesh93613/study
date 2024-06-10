@@ -541,6 +541,8 @@ header .subheader {
 footer {
   min-height: 148px;
   padding: 14px 0 31px 0;
+}
+footer .container {
   position: relative;
 }
 footer img {
@@ -552,7 +554,7 @@ footer a {
 }
 footer .social {
   position: absolute;
-  left: 10%;
+  left: 15%;
   top: 50%;
   transform: translateY(-50%);
   width: 156px;
@@ -601,7 +603,7 @@ footer .info_lang {
 }
 footer .download {
   position: absolute;
-  right: 10%;
+  right: 0%;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
@@ -636,12 +638,12 @@ footer .download_item {
   }
   footer .download {
     flex-direction: column;
-    right: 0%;
+    right: 6vw;
     width: 177px;
     height: 127px;
   }
   footer .social {
-    left: 6%;
+    left: 10vw;
   }
 }
 @media (max-width: 991px) {
@@ -788,8 +790,20 @@ footer .download_item {
   header .hamburger_active span:nth-child(3) {
     transform: translateY(3px) rotate(45deg);
   }
-  .sm_display {
+  .subheader .sm_display {
     display: block;
+    line-height: 12px;
+    text-align: center;
+    display: block;
+    margin-top: 14px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .subheader .sm_display_none {
+    display: none;
   }
   .subheader_tell {
     line-height: 35px;
@@ -800,9 +814,10 @@ footer .download_item {
   .subheader_btn {
     display: block;
     margin: 0 auto;
-    width: 120px;
-    height: 25px;
-    font-size: 11px;
+    margin-top: 14px;
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
   }
   .subheader_logo img {
     width: 220px;
@@ -908,6 +923,8 @@ footer .download_item {
     display: none;
   }
   .mobile_card {
+    margin: 0 auto;
+    margin-top: 19px;
     width: 290px;
     height: 254px;
   }
@@ -918,8 +935,9 @@ footer .download_item {
     min-height: 515px;
   }
   .car_img {
-    width: 300px;
-    height: 190px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
     margin-top: 35px;
   }
   .car_text {
