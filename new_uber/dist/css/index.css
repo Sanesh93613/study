@@ -790,28 +790,13 @@ footer .download_item {
   header .hamburger_active span:nth-child(3) {
     transform: translateY(3px) rotate(45deg);
   }
-  .subheader .sm_display {
-    display: block;
-    line-height: 12px;
-    text-align: center;
-    display: block;
-    margin-top: 14px;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .subheader .sm_display_none {
-    display: none;
-  }
-  .subheader_tell {
+  header_tell {
     line-height: 35px;
     margin-top: 13px;
     font-size: 17px;
     text-align: center;
   }
-  .subheader_btn {
+  header_btn {
     display: block;
     margin: 0 auto;
     margin-top: 14px;
@@ -819,7 +804,7 @@ footer .download_item {
     height: 30px;
     font-size: 12px;
   }
-  .subheader_logo img {
+  header_logo img {
     width: 220px;
   }
   .promo {
@@ -919,9 +904,6 @@ footer .download_item {
   .promo {
     min-height: 400px;
   }
-  .xs_none {
-    display: none;
-  }
   .mobile_card {
     margin: 0 auto;
     margin-top: 19px;
@@ -948,6 +930,38 @@ footer .download_item {
     font-size: 17px;
   }
   footer .info {
-    width: 100vw;
+    width: 85vw;
+  }
+  footer .info_subtitle {
+    font-size: 8px;
+  }
+  footer .info_hr {
+    width: 285px;
+  }
+}
+@media (max-width: 575px) {
+  .mobile_none {
+    display: none;
+  }
+  .mobile_display {
+    display: block;
+  }
+  .mobile_display .mobile_tell {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .mobile_display .car_img {
+    width: 300px;
+    height: 190px;
+  }
+  .mobile_display .car_text {
+    margin-top: 23px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #ffffff;
   }
 }
