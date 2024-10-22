@@ -255,8 +255,21 @@ header
 		background: url('../img/mobile/mobile_6.jpg') center center/cover no-repeat
 
 .car
+	position: relative
 	min-height: 900px
-	
+	.car_img
+			position: absolute
+			top:50%
+			transform: translateY(-50%)
+			left: 50%
+			transform: translateX(-50%)
+	.car_text
+		margin: 0 auto
+		margin-top: 7%
+		font-size: 17px
+		text-align: center
+		font-weight: 300
+		color: #222222
 	&_1
 		min-height: 500px
 		background-color: #070716
@@ -274,24 +287,11 @@ header
 		color: #ffffff
 		margin-top: 19px
 	&_2
-		position: relative
+		
 		padding-bottom: 138px
 		
 		background: url('../img/mobile_bg.jpg') center center/cover no-repeat 
-		.car_img
-			position: absolute
-			// bottom: 166%
-			top:-240%
-			
-			left: 50%
-			transform: translateX(-50%)
-		.car_text
-			margin: 0 auto
-			margin-top: 7%
-			font-size: 17px
-			text-align: center
-			font-weight: 300
-			color: #222222
+		
 .requirements
 	min-height: 919px
 	padding: 69px 0 84px 0
