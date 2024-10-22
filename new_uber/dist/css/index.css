@@ -237,6 +237,8 @@ header .subheader {
   color: #202020;
 }
 .eight_text span {
+  margin-bottom: -15px;
+  display: block;
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
@@ -307,7 +309,8 @@ header .subheader {
   height: 26px;
   background-color: #000000;
   bottom: 35px;
-  left: 147px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 100%;
   cursor: pointer;
 }
@@ -409,7 +412,7 @@ header .subheader {
 }
 .car_2 .car_text {
   margin: 0 auto;
-  margin-top: 217px;
+  margin-top: 7%;
   font-size: 17px;
   text-align: center;
   font-weight: 300;
@@ -618,4 +621,33 @@ footer .download_item {
 .black {
   height: 8px;
   background-color: #070716;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .eight_wrapper .eight_item {
+    align-items: center;
+  }
+  .eight_wrapper .eight_item .eight_round {
+    width: 100px;
+    height: 100px;
+  }
+  .eight_wrapper .eight_item .eight_text span {
+    margin-bottom: 5px;
+  }
+  .mobile .col-4 .mobile_card {
+    width: 299px;
+  }
+  .mobile .col-4 .mobile_card .mobile_card_text {
+    font-size: 22px;
+  }
+  footer .social {
+    left: 5%;
+  }
+  footer .download {
+    flex-direction: column;
+    right: 10%;
+    width: 100px;
+    height: 100%;
+    justify-content: space-around;
+  }
 }
