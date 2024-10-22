@@ -357,11 +357,11 @@ header .subheader {
 
 .car {
   position: relative;
-  min-height: 900px;
+  min-height: 770px;
 }
 .car .car_img {
   position: absolute;
-  top: 50%;
+  top: 28%;
   transform: translateY(-50%);
   left: 50%;
   transform: translateX(-50%);
@@ -375,7 +375,7 @@ header .subheader {
   color: #222222;
 }
 .car_1 {
-  min-height: 500px;
+  min-height: 630px;
   background-color: #070716;
   padding-top: 56px;
 }
@@ -416,7 +416,7 @@ header .subheader {
   margin-top: 19px;
 }
 .car_2 {
-  padding-bottom: 138px;
+  padding-bottom: 100px;
   background: url("../img/mobile_bg.jpg") center center/cover no-repeat;
 }
 
@@ -624,6 +624,11 @@ footer .download_item {
   background-color: #070716;
 }
 
+@media (min-width: 1200px) {
+  .car .car_img {
+    top: 26%;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .eight_wrapper .eight_item {
     align-items: center;
