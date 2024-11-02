@@ -1,28 +1,38 @@
-
+// *
+// 	border: 1px solid red
 // /* Large desktops and laptops */
 @media (min-width: 1200px) 
 	.car 
 		.car_img
-			top: 26%
+			top: 27%
 
 
 // /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) 
-	.eight_wrapper
-		.eight_item
-			align-items: center
-			.eight_round
-				width: 100px
-				height: 100px	
-			.eight_text
-				span
-					margin-bottom: 5px	
+	header 
+		.menu
+			&_link
+				font-size: 14px
+	.promo
+		&_title
+			font-size: 52px	
+		&_subtitle
+			font-size: 32px
+		.eight_wrapper
+			.eight_item
+				align-items: center
+				.eight_round
+					width: 100px
+					height: 100px	
+				.eight_text
+					span
+						margin-bottom: 5px	
 	.mobile
-		.col-4 
-			.mobile_card
-				width: 299px
-				.mobile_card_text 
-					font-size: 22px
+		&_card
+			width: 300px
+			&_text 
+				font-size: 22px
+				line-height: 35px
 	footer 
 		.social
 			left: 5%
@@ -34,14 +44,81 @@
 			justify-content: space-around
 
 
-// /* Portrait tablets and small desktops */
-// media (min-width: 768px) and (max-width: 991px) {
+// /* Portrait tablets and small desktops */	
+@media (min-width: 768px) and (max-width: 991px) 
+	header 
+		.menu
+			&_item
+				padding-right: 6px
+			&_link
+				font-size: 12px
+	.subheader
+		&_tell
+			font-size: 21px
+		&_btn
+			width: 164px	
+	.promo
+		&_title
+			font-size: 41px
+		&_subtitle
+			font-size: 25px
 
-// }
+	.eight
+		&_title
+			font-size: 33px
+		&_round
+				width: 140px
+				height: 100px
+
+	.mobile
+		&_card
+			height: 260px
+			width: 230px
+			&_text
+				font-size: 18px
+				line-height: 30px
+	.car
+		&_img
+			top: 35%
+			width: 650px
+
+
+	.requirements
+		&_subtitle
+			font-size: 21px
+		ul
+			li
+				font-size: 16px
+		&_title
+			font-size: 36px
+
+	.cities
+		&_title
+			font-size: 36px
+		&_subtitle
+			font-size: 16px
+			margin-top: 11px
+	footer
+		.info
+			margin-top: 50px
+			
+		.social
+			height: 160px
+			flex-direction: column
+			left: 8%
+		.download
+			flex-direction: column
+			right: 0%
+			height: 160px
+			width: 90px
+			
+		
+
+
 
 // /* Landscape phones and portrait tablets */
 // media (max-width: 767px) {
-
+// hamburger
 // }
 
 // /* Landscape phones and smaller */
