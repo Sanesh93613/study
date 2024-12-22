@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../fonts/RobotoMedium/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoMedium/Roboto-Medium.woff') format('woff'),
+        url('../fonts/RobotoMedium/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../fonts/RobotoBlack/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/RobotoBlack/Roboto-Black.woff') format('woff'),
+        url('../fonts/RobotoBlack/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../fonts/RobotoLight/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/RobotoLight/Roboto-Light.woff') format('woff'),
+        url('../fonts/RobotoLight/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url('../fonts/RobotoThin/Roboto-Thin.woff2') format('woff2'),
+        url('../fonts/RobotoThin/Roboto-Thin.woff') format('woff'),
+        url('../fonts/RobotoThin/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Regular'), local('Roboto-Regular'),
+        url('../fonts/RobotoRegular/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoRegular/Roboto-Regular.woff') format('woff'),
+        url('../fonts/RobotoRegular/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/RobotoBold/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoBold/.Roboto-Bold.woff') format('woff'),
+        url('../fonts/RobotoBold/.Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+

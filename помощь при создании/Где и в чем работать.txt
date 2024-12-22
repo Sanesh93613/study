@@ -1,0 +1,10 @@
+figma 
+css плагин - https://www.figma.com/community/plugin/1254262542670221199
+pixso
+https://pixso.net/
+zeplin
+https://zeplin.io/
+перенос из фигмы в zeplin плагин, слева в слоях добавить во frame что нужно перенести
+https://www.figma.com/community/plugin/745330164019088593/zeplin
+figpea
+хз у меня уже не работает, но вот на всякией ссылка https://figpea.com/

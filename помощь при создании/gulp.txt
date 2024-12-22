@@ -1,0 +1,20 @@
+установить node js
+npm init 
+npm install gulp-cli --save-dev
+npm instal gulp --save-dev
+npm i gulp-sass --save-dev
+npm i sass --save-dev
+npm install browser-sync --save-dev
+npm i gulp-autoprefixer --save-dev
+npm i gulp-clean-css --save-dev
+все что добавили можно посмотреть в package.json
+package-lock можно забить
+далее создаем для работы галпфайл - gulpfile.js
+дальше смотри все что есть в галпфайле и не задавай лишних вопросов тупо копируй
+clear чтобы очистить терминал
+gulp (server) без скобок для какой-то отдельной задачи
+gulp для запуска кучи команд
+перед всеми изменениями нужно прекратить работу gulp - ctrl+C
+npm i gulp-rename --save-dev
+local host 3001 в live server browser sync позволяет смотреть с телефона
+если нужно перенести gulp в новый проект, переносим gulpfile и package gson и в консоль пишем npm i
