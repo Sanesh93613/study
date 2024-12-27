@@ -1,0 +1,30 @@
+body{
+    background:#faebd0;
+}
+.copyright{
+    display: block;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+.i{
+    font-style: italic;
+}
+ul, li {
+    list-style: none;
+    text-align: center;
+  }
+
+
+  
