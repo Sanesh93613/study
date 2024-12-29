@@ -1,3 +1,133 @@
-body{
-    background-color: pink;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.title {
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+.title__colored {
+    font-size: 41px;
+    line-height: 100%;
+    color: #f9bf3b;
+}
+.title__big {
+    font-size: 80px;
+    line-height: 80px;
+    color: #fff;
+}
+.btn {
+    display: block;
+    min-width: 315px;
+    min-height: 72px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #ff4d00 0%, #feb05d 100%);
+    padding: 0 15px;
+    /* text */
+
+    font-weight: 500;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+.promo {
+    /* лучше вообще не использовать( так сейчас принято для адаптации в дальнейшем) */
+    /* min-height: 800px; */
+    background: url("../img/bg/main_bg.jpg") center center / cover no-repeat;
+    padding: 22px 0 53px 0;
+}
+
+.logo__img {
+    display: block;
+    margin: 0 auto;
+}
+.logo__text {
+    margin-top: 13px;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.promo h1 {
+    margin-top: 52px;
+}
+.promo h2 {
+    margin-top: 12px;
+}
+
+.promo__text {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.promo__text span {
+    color: #f9bf3b;
+    text-transform: uppercase;
+}
+.promo .btn {
+    margin-top: 75px;
+}
+.promo__more-text {
+    margin-top: 75px;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+.promo__more-img {
+    display: block;
+    margin: 10 auto 0px auto;
+}
+
+.intensive {
+    padding: 80px 0;
+    background-color: #efefef;
+}
+.intensive__title {
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #252525;
+}
+
+.divider {
+    background-color: #f9bf3b;
+    width: 220px;
+    height: 7px;
+    margin: 14px auto 0 auto;
+}
+
+.intensive__subtitle {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.intensive__descr {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #4a4a4a;
 }
