@@ -1,0 +1,27 @@
+@font-face {
+    /* название */
+    font-family: "Roboto";
+    /* посмотри есть ли они уже в установленных */
+    src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"),
+        /* если нет возьми по этому адресу */ url("../fonts/Roboto-Medium.woff")
+            format("woff");
+    /* woff сейчас используется почти везде и он весит меньше встего так что от остальных нет смысла */
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+
+    src: local("Roboto Black"), local("Roboto-Black"),
+        url("../fonts/Roboto-Black.woff") format("woff");
+
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Light"), local("Roboto-Light"),
+        url("../fonts/Roboto-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}

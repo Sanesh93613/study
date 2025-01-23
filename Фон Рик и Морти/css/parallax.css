@@ -1,0 +1,271 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+#controls {
+    position: fixed; /* Закрепляем блок */
+    bottom: 15%; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    width: 400px; /* Увеличиваем ширину для размещения двух колонок */
+    /* height: 70vh; Ограниченная высота */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+    color: white;
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+    overflow-y: auto; /* Прокрутка по вертикали, если контент выходит за границы */
+    display: flex; /* Включаем Flexbox */
+    flex-wrap: wrap; /* Указываем перенос строк, если ширина недостаточна */
+    gap: 20px; /* Расстояние между колонками */
+}
+
+.block {
+    flex: 1 !important; /* Блоки занимают равное пространство */
+    min-width: 180px; /* Минимальная ширина для каждого блока */
+    max-width: 45%; /* Ограничиваем ширину каждого блока, чтобы они располагались рядом */
+}
+
+.block h3 {
+    text-align: center; /* Выравнивание заголовков по центру */
+    font-size: 23px;
+}
+
+.block label {
+    display: block;
+    /* margin-bottom: 10px; */
+    font-size: 20px;
+}
+
+.block input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* Общие стили для кнопок */
+
+#settings-button {
+    position: fixed;
+    bottom: 5%;
+    left: 20px;
+}
+button {
+    background-color: #007bff; /* Синий фон */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Темнее синий при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+button:active {
+    background-color: #004085; /* Ещё темнее при нажатии */
+}
+
+/* Стили для input */
+input[type="text"],
+input[type="number"],
+input[type="range"],
+input[type="color"] {
+    width: 100%;
+    /* padding: 12px 20px; */
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f0f8ff !important; /* Явное указание фонового цвета */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="range"]:focus,
+input[type="color"]:focus {
+    border-color: #007bff; /* Синяя рамка при фокусе */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Легкое свечение вокруг поля */
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+input[type="range"]:focus {
+    background: #007bff;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #0056b3;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: #004085;
+}
+
+input[type="color"] {
+    padding: 5px 10px;
+    border: 2px solid #9b7676;
+    border-radius: 8px;
+    background-color: #286ba7 !important; /* Явное указание фонового цвета */
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+input[type="color"]:focus {
+    border-color: #007bff;
+}
+
+@keyframes animateBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -960px 0;
+    }
+}
+@keyframes animateAsteroids {
+    from {
+        background-position: 50% center;
+    }
+    to {
+        background-position: -50% center;
+    }
+}
+
+.planet-bg {
+    background: url(../images/parallax/planet-bg.webp) center center/cover
+        no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.space-bg,
+.stars-bg,
+.clouds-bg,
+.specs-bg,
+.planet,
+.icemoon,
+.asteroids {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+}
+@media only screen and (max-width: 768px) {
+    .space-bg,
+    .stars-bg,
+    .clouds-bg,
+    .specs-bg,
+    .planet,
+    .icemoon,
+    .asteroids {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: repeat;
+        background-size: 100%;
+    }
+}
+
+.space-bg {
+    background-image: url("../images/parallax/space-bg.webp");
+    animation: animateBackground 120s linear infinite;
+    z-index: -7;
+    opacity: 1;
+    opacity: 40%;
+}
+.stars-bg {
+    background-image: url("../images/parallax/stars-bg.webp");
+    animation: animateBackground 60s linear infinite;
+    z-index: -6;
+}
+.clouds-bg {
+    background-image: linear-gradient(
+            to right,
+            rgba(87, 1, 136, 0.37),
+            rgba(87, 1, 136, 0.38)
+        ),
+        url("../images/parallax/clouds-bg.webp");
+    filter: saturate(50%);
+    animation: animateBackground 40s linear infinite;
+    z-index: -5;
+}
+.specs-bg {
+    background-image: url("../images/parallax/specs-bg.webp");
+    animation: animateBackground 30s linear infinite;
+    z-index: -4;
+}
+
+.planet {
+    background-image: url("../images/parallax/planet.webp");
+    background-size: 33%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -3;
+}
+@media only screen and (max-width: 768px) {
+    .planet {
+        background-size: 100%;
+    }
+}
+
+.icemoon {
+    background-image: url("../images/parallax/icemoon.webp");
+    background-size: 25%;
+    filter: brightness(85%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+}
+@media only screen and (max-width: 768px) {
+    .icemoon {
+        background-size: 100%;
+    }
+}
+
+.asteroids {
+    background-image: url("../images/parallax/asteroids.webp");
+    background-size: 50%;
+    animation: animateAsteroids 40s linear infinite;
+    z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+    .asteroids {
+        animation: animateAsteroids 10s linear infinite;
+    }
+}

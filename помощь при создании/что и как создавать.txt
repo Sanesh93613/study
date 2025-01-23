@@ -16,3 +16,8 @@ prettier - расширения для продвинутого форматир
 
 
  background: url("../img/bg/main_bg.jpg") center center / cover no-repeat;
+
+
+flex 
+gap - зазор 
+order - порядок элемента 

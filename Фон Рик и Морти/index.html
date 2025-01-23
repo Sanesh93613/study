@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/parallax.css">
+	<title>Sanesh93613 WallPapper</title>
+</head>
+
+<body class="">
+	<div class="wrapper planet-bg">
+		<div id="settings-container">
+			<button id="settings-button">⚙️ Настройки</button>
+			<div id="controls">
+				<div class="block">
+					<h3>Настройки НЛО</h3>
+					<label for="squid-radius">Радиус НЛО:</label>
+					<input id="squid-radius" type="number" value="20" step="1" min="" max="">
+
+					<label for="squid-width-factor">Фактор ширины:</label>
+					<input id="squid-width-factor" type="number" value="15" step="1" min="" max="">
+
+					<label for="squid-height-factor">Фактор высоты:</label>
+					<input id="squid-height-factor" type="number" value="12" step="1" min="" max="">
+
+					<label for="squid-distance">Порог дистанции НЛО:</label>
+					<input id="squid-distance" type="number" value="800" step="50" min="" max="">
+
+					<label for="squidSpeed">Фактор скорости НЛО:</label>
+					<input id="squidSpeed" type="number" value="10" step="1" min="" max="">
+					<button id="reset-button">Сбросить настройки</button>
+				</div>
+				<div class="block">
+					<h3>Настройки дыма</h3>
+					<label for="smoke-size">Размер дыма:</label>
+					<input id="smoke-size" type="number" value="5" min="" max="">
+
+					<label for="smoke-frequency">Частота появления:</label>
+					<input id="smoke-frequency" type="number" value="5" min="" max="">
+
+					<label for="smoke-fade">Скорость угасания:</label>
+					<input id="smoke-fade" type="number" value="0.01" step="0.01" min="" max="">
+
+					<label for="smoke-spread">Разлетание частиц:</label>
+					<input id="smoke-spread" type="number" value="5" min="" max="">
+
+					<label for="smoke-color">Цвет дыма:</label>
+					<input id="smoke-color" type="color" value="#ffffff">
+
+					<label for="distance-threshold">Дым до курсора:</label>
+					<input type="number" id="distance-threshold" min="" max="" value="200" step="10">
+				</div>
+
+
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="space-bg"></div>
+		<div class="stars-bg"></div>
+		<div class="asteroids"></div>
+
+		<div class="specs-bg"></div>
+
+		<canvas class="canvas js-canvas" width="500" height="500"></canvas>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
