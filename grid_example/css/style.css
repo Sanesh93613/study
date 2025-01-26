@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr) 50px;
+	grid-template-rows: 1fr 2.5fr 1fr;
+	/* grid-template: 60px 60px 60px / 33% 33% 33%; */
+	/* row-gap: 10%;
+	column-gap: 25px; */
+	gap: 10% 25px;
+}
+
+.grid-elem {
+	height: 600px;
+	background-color: rgba(1, 1, 96, 1);
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	font-size: 26px;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
