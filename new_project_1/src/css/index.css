@@ -9,8 +9,35 @@ html {
 	--container-padding-inline: 13%;
 	--footer-padding-inline: 10%;
 }
+body {
+	::selection {
+		background-color: var(--dark-color);
+		color: var(--light-color);
+	}
+}
 .container {
 	padding: 0 var(--container-padding-inline);
+}
+
+.title {
+	text-align: center;
+
+	font-weight: 400;
+	font-size: 40px;
+	color: var(--dark-color);
+	span {
+		position: relative;
+		&::after {
+			position: absolute;
+			bottom: -3px;
+			right: 0px;
+			content: "";
+			display: block;
+			width: 75px;
+			height: 2px;
+			background-color: var(--dark-color);
+		}
+	}
 }
 
 .promo {
@@ -18,6 +45,11 @@ html {
 	min-height: 100vh;
 	background: url(../img/bg/main-bg.jpg) center center/cover no-repeat;
 	padding-top: 75px;
+	padding-bottom: 254px;
+	::selection {
+		background-color: var(--light-color);
+		color: var(--dark-color);
+	}
 }
 .promo__title {
 	font-weight: 400;
@@ -48,9 +80,17 @@ html {
 	font-weight: 100;
 	font-size: 16px;
 	color: var(--light-color);
+
+	transition: all 0.3s ease-out;
 }
 
+.btn:hover {
+	font-weight: 500;
+	color: var(--light-color);
+	box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.62);
+}
 .promo__address {
+	position: relative;
 	margin-top: 100px;
 	font-weight: 100;
 	font-size: 16px;
@@ -61,6 +101,17 @@ html {
 	a {
 		color: inherit;
 		text-decoration: none;
+	}
+	&::before {
+		display: block;
+		position: absolute;
+		left: -45px;
+		top: -17px;
+		content: "";
+		width: 40px;
+		height: 49px;
+		background: url("../img/text__icons/Arrow.svg") center center/cover
+			no-repeat;
 	}
 }
 
@@ -123,11 +174,34 @@ html {
 		margin-top: 20px;
 		padding: 0;
 		li {
+			position: relative;
 			list-style-type: none;
 			margin-top: 10px;
 			font-weight: 400;
 			font-size: 16px;
 			color: var(--dark-color);
+			&:first-child::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				background: url("../img/text__icons/Camera.svg") center
+					center/cover no-repeat;
+				left: -30px;
+				top: 2px;
+			}
+			&:nth-child(3)::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				background: url("../img/text__icons/edit.svg") center
+					center/cover no-repeat;
+				left: -30px;
+				top: 2px;
+			}
 		}
 	}
 }
@@ -144,4 +218,115 @@ html {
 	font-size: 20px;
 	letter-spacing: 0.02em;
 	color: var(--dark-color);
+}
+
+.works {
+	background-color: var(--light-color);
+	padding-top: 80px;
+}
+
+.works__grid {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr) 1.5fr;
+	/* если не нужно сохранить пропорции изображения */
+	/* grid-template-rows: repeat(2, 463px) 700px; */
+	column-gap: 30px;
+	row-gap: 50px;
+	img {
+		width: 100%;
+		box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+		/* просто растянем изображение без сохранения пропорций */
+	}
+}
+
+.inspiration {
+	background-color: var(--light-color);
+	padding-top: 80px;
+}
+
+.inspiration__grid {
+	margin-top: 53px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 30px;
+	row-gap: 30px;
+	img {
+		width: 100%;
+		box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+	}
+	.vertical {
+		height: 100%;
+		grid-column-start: 4;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	.horisontal {
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+}
+
+.customers {
+	background-color: var(--light-color);
+	padding-top: 80px;
+	padding-bottom: 100px;
+}
+
+.customers__wrapper {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 20px;
+
+	img {
+		width: calc((100% - 90px) / 4);
+		box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 88px var(--footer-padding-inline);
+
+	background-color: #000;
+
+	font-weight: 400;
+	font-size: 20px;
+	color: var(--light-color);
+}
+.footer__address {
+	font-style: normal;
+}
+.footer__tel {
+	color: var(--light-color);
+	text-decoration: none;
+}
+
+.footer__social {
+	padding-left: 0;
+	list-style: none;
+	display: flex;
+	column-gap: 30px;
+	li {
+		border: 1px solid var(--light-color);
+		width: 32px;
+		height: 32px;
+		background-color: #000;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			img {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
 }
