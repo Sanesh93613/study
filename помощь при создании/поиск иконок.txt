@@ -1,0 +1,3 @@
+https://fontawesome.com/ - нужно регаться и много платного 
+https://fontello.com/  - загрузить свои через svg
+https://fonts.google.com/icons - бесплатно, и плохо работает

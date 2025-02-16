@@ -1,0 +1,3 @@
+Bootstrap: 576px, 768px, 992px, and 1200px
+Foundation: 40em and 64em
+Bulma: 768px, 769px, 1024px, 1216px, and 1408px
