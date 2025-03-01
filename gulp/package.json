@@ -1,21 +1,12 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^3.0.2",
+    "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
-    "gulp-sass": "^5.1.0",
-    "sass": "1.77.6"
-  },
-  "dependencies": {
-    "gulp-live-server": "^0.0.31",
-    "gulp-update": "^0.0.2"
-  },
-  "description": ""
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.85.1"
+  }
 }

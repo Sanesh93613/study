@@ -146,7 +146,12 @@ body {
         }
     }
 }
-
+/* Дает плавный скрол при переходе по локальным ссылкам */
+/* не будет работать если винда на макс производительности и отключены анимации */
+/* так что по сути это бесполезно и лучше юзать JS Scroll */
+html {
+    scroll-behavior: smooth !important;
+}
 .btn:hover {
     font-weight: 500;
     color: var(--light-color);
@@ -453,7 +458,7 @@ body {
         grid-column-start: 4;
         grid-row-start: 1;
         grid-row-end: 3;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
             & {
                 grid-column-start: 2;
                 grid-row-start: 2;
@@ -471,7 +476,7 @@ body {
     .horisontal {
         grid-column-start: 2;
         grid-column-end: 4;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
             & {
                 grid-column-start: 1;
                 grid-column-end: 3;
@@ -484,7 +489,7 @@ body {
             }
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
         & {
             grid-template-columns: repeat(2, 1fr);
             margin-top: 43px;
@@ -556,12 +561,15 @@ footer {
     font-weight: 400;
     font-size: 20px;
     color: var(--light-color);
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
     @media screen and (max-width: 768px) {
         & {
             flex-direction: column;
             align-items: start;
             padding: 30px 0 40px 46px;
-            font-size: 16px;
+
             gap: 30px;
         }
     }

@@ -1,0 +1,6 @@
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
+https://developer.mozilla.org/en-US/docs/Web/CSS/padding-inline
+https://developer.mozilla.org/ru/docs/Web/CSS/inline-size
+https://developer.mozilla.org/ru/docs/Web/CSS/block-size
+https://developer.mozilla.org/ru/docs/Web/CSS/writing-mode

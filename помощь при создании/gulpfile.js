@@ -1,41 +1,36 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require("gulp-rename");
-const autoprefixer = require('gulp-autoprefixer');
+const sass        = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const rename = require("gulp-rename");
 
-// live сервер
 gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "./" //если index находится в той же папке оставить вот так
+            baseDir: "src"
         }
     });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
-// создаем задачу для компиляции scss или sass в css
-gulp.task('styles',function(){
-    return gulp.src("sass/*.+(scss|sass)")
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // Просто делаем чтобы css был сжат
-    .pipe(rename({
-        suffix: ".min"
-    }))
-    .pipe(autoprefixer({
-        cascade: false
-    }))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest("css"))
-    .pipe(browserSync.stream()); // перезапускаем live server 
-});
-// как только файлы sass будут изменяться будет работать функция styles которая будет все переделывать в css и обновлять работу live server
-gulp.task('watch', function(){
-    gulp.watch("sass/*.+(scss|sass)", gulp.parallel('styles'));
-    // обновляем live server при изменениях в html 
-    gulp.watch("*html").on('change', browserSync.reload);
+
+gulp.task('styles', function() {
+    return gulp.src("src/sass/**/*.+(scss|sass)")
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(rename({suffix: '.min', prefix: ''}))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest("src/css"))
+        .pipe(browserSync.stream());
 });
 
-// запускаем команды в работу одной командой 
-gulp.task('default', gulp.parallel('server', 'styles', 'watch')); 
+gulp.task('watch', function() {
+    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+})
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles'));

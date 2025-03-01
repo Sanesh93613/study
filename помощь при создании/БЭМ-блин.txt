@@ -1,0 +1,7 @@
+snake_case
+kebab-case
+camelCaseOne
+PascalCase
+.promo__title
+
+БЭМ
