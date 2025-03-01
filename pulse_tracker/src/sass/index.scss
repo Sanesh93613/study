@@ -1,7 +1,13 @@
-body{
-    background-color: pink;
-    
+@use 'base/variables';
+
+@use 'blocks/promo';
+@use 'blocks/header';
+@use 'blocks/buttons';
+* {
+    font-family: 'MuseoModerno', sans-serif;
 }
-h1{
-    color: red;
+.container{
+    max-width: 950px;
+    margin: 0 auto;
 }
+

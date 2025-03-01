@@ -1,0 +1,24 @@
+@use "../base/variables";
+.button {
+    width: 153px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: variables.$main-color;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    &_header {
+        margin-top: 4px;
+    }
+    &_main {
+        margin-top: 67px;
+        font-size: 16px;
+        width: 300px;
+        height: 50px;
+    }
+}
