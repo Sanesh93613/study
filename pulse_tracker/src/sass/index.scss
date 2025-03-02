@@ -1,13 +1,18 @@
-@use 'base/variables';
-
-@use 'blocks/promo';
-@use 'blocks/header';
-@use 'blocks/buttons';
+@use "base/variables";
+@use "blocks/titles";
+@use "blocks/promo";
+@use "blocks/header";
+@use "blocks/buttons";
+@use "blocks/advantages";
+@use "blocks/consultation";
+@use "blocks/forms.scss";
 * {
-    font-family: 'MuseoModerno', sans-serif;
+    font-family: "MuseoModerno", sans-serif;
 }
-.container{
+.container {
     max-width: 950px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+        padding: 0 7% 0 7%;
+    }
 }
-

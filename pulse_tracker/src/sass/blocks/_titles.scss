@@ -1,0 +1,33 @@
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+    color: #0d0d0d;
+    &_advantages {
+        @media screen and (max-width: 768px) {
+            & {
+                font-size: 25px;
+            }
+        }
+    }
+    &_consultation {
+        text-align: left;
+        font-size: 36px;
+        line-height: 54px;
+        color: #fff;
+        @media screen and (max-width: 768px) {
+            & {
+                font-size: 30px;
+                line-height: 41px;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            & {
+                font-size: 21px;
+                line-height: 37px;
+            }
+        }
+    }
+}

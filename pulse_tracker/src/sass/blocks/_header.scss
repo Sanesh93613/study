@@ -8,6 +8,14 @@ $main-color: #99c701;
         img {
             width: 100%;
         }
+        @media screen and (max-width: 768px) {
+            & {
+                width: 220px;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            width: 200px;
+        }
     }
     &__official {
         font-weight: 500;
@@ -19,6 +27,9 @@ $main-color: #99c701;
             margin-top: 7px;
             font-weight: 500;
             font-size: 18px;
+        }
+        @media screen and (max-width: 540px) {
+            display: none;
         }
     }
     &__phone {

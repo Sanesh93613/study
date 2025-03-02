@@ -1,0 +1,31 @@
+.consultation {
+    min-height: 680px;
+    padding: 100px 0 92px 0;
+    background: url("../img/bg/bg2.jpg") center center/cover no-repeat;
+
+    &__descr {
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 20px;
+
+        line-height: 30px;
+        color: #fff;
+        @media screen and (max-width: 540px) {
+            & {
+                font-size: 17px;
+                line-height: 22px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        & {
+            min-height: 640px;
+            padding: 50px 0 50px 0;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        & {
+            min-height: 600px;
+        }
+    }
+}
