@@ -1,0 +1,4 @@
+https://kenwheeler.github.io/slick/    - slik slider
+https://owlcarousel2.github.io/OwlCarousel2/   - owl carousel
+https://github.com/ganlanyuan/tiny-slider    - tiny slider
+https://getbootstrap.com/docs/4.3/components/carousel/  - bootstrap slider
