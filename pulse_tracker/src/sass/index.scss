@@ -1,4 +1,3 @@
-@use "base/variables";
 @use "blocks/titles";
 @use "blocks/promo";
 @use "blocks/header";
@@ -7,12 +6,15 @@
 @use "blocks/consultation";
 @use "blocks/forms.scss";
 @use "blocks/carousel";
+@use "blocks/catalog";
+
 * {
     font-family: "MuseoModerno", sans-serif;
 }
 .container {
     max-width: 950px;
     margin: 0 auto;
+    position: relative;
     @media screen and (max-width: 1024px) {
         padding: 0 7% 0 7%;
     }
