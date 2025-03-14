@@ -17,29 +17,6 @@
         );
     });
 
-    // $(".catalog-item__link").each(function (i) {
-    //     $(this).on("click", function (e) {
-    //         e.preventDefault();
-    //         $(".catalog-item__content")
-    //             .eq(i)
-    //             .toggleClass("catalog-item__content_active");
-    //         $(".catalog-item__list")
-    //             .eq(i)
-    //             .toggleClass("catalog-item__list_active");
-    //     });
-    // });
-
-    // $(".catalog-item__back").each(function (i) {
-    //     $(this).on("click", function (e) {
-    //         e.preventDefault();
-    //         $(".catalog-item__content")
-    //             .eq(i)
-    //             .toggleClass("catalog-item__content_active");
-    //         $(".catalog-item__list")
-    //             .eq(i)
-    //             .toggleClass("catalog-item__list_active");
-    //     });
-    // });
 
     function toggleSlide(item) {
         $(item).each(function (i) {
@@ -59,14 +36,23 @@
     toggleSlide(".catalog-item__back");
 })(jQuery);
 
+
+// slider function
 const slider = tns({
     container: ".carousel__slider",
     items: 1,
     slideBy: "page",
     autoplay: false,
-    nav: false,
+    nav: true,
     controls: false,
-});
+    autoHeight: true,
+    responsive: {
+        700: {
+            nav:false,
+        },
+}});
+
+// slider buttons
 document.querySelector(".prev").addEventListener("click", function () {
     slider.goTo("prev");
 });
