@@ -39,6 +39,9 @@ $main-color: #99c701;
 
         color: #fff;
         text-decoration: none;
+        @media screen and (max-width: 580px) {
+            font-size: 17px;
+        }
     }
     &__contacts {
         display: flex;
